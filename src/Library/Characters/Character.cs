@@ -23,7 +23,7 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IItem item in this.items)
+                foreach (AttackItem item in this.items)
                 {
 
                     value += (item as AttackItem).AttackValue;
