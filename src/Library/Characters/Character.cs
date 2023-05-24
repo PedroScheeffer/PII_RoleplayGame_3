@@ -10,9 +10,10 @@ namespace RoleplayGame
         public Character(string name)
         {
             this.Name = name;
-            
-            this.AddItem(new Bow());
-            this.AddItem(new Helmet());
+            // bow
+            this.AddItem(new AttackItem(15));
+            // helmet
+            this.AddItem(new DefenseItem(18));
         }
 
         public string Name { get; set; }
@@ -25,7 +26,7 @@ namespace RoleplayGame
                 foreach (IItem item in this.items)
                 {
 
-                    value += (item as IAttackItem).AttackValue;
+                    value += (item as AttackItem).AttackValue;
 
                 }
                 return value;
@@ -37,10 +38,10 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IDefenseItem item in this.items)
+                foreach (DefenseItem item in this.items)
                 {
 
-                    value += (item as IDefenseItem).DefenseValue;
+                    value += (item as DefenseItem).DefenseValue;
                     
                 }
                 return value;

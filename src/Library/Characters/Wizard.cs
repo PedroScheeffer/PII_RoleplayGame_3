@@ -11,7 +11,7 @@ namespace RoleplayGame
 
         public Wizard(string name) : base(name)
         {            
-            this.AddItem(new Staff());
+            this.AddItem(new Item());
         }
         
         public new int AttackValue
@@ -19,9 +19,9 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IAttackItem item in this.items)
+                foreach (AttackItem item in this.items)
                 {
-                    value += (item as IAttackItem).AttackValue;
+                    value += (item as AttackItem).AttackValue;
                 }
                 foreach (IMagicalAttackItem item in this.magicalItems)
                 {
@@ -36,10 +36,10 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IDefenseItem item in this.items)
+                foreach (DefenseItem item in this.items)
                 {
 
-                    value += (item as IDefenseItem).DefenseValue;
+                    value += (item as DefenseItem).DefenseValue;
                 }
                 foreach (IMagicalDefenseItem item in this.magicalItems)
                 {

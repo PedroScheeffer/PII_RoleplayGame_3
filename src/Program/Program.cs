@@ -11,9 +11,9 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            Axe axe= new Axe();
-            Bow bow=new Bow();
-            Armor armor1=new Armor();
+            AttackItem axe= new AttackItem(25);
+            AttackItem bow=new AttackItem(15);
+            DefenseItem armor1=new DefenseItem(25);
 
             Figths figths1=new Figths();
 
