@@ -13,7 +13,6 @@ namespace RoleplayGame
         {            
             this.AddItem(new Staff());
         }
-
         
         public new int AttackValue
         {
