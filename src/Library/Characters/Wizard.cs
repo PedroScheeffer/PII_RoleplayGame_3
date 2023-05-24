@@ -19,19 +19,13 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IItem item in this.items)
+                foreach (IAttackItem item in this.items)
                 {
-                    if (item is IAttackItem)
-                    {
-                        value += (item as IAttackItem).AttackValue;
-                    }
+                    value += (item as IAttackItem).AttackValue;
                 }
-                foreach (IMagicalItem item in this.magicalItems)
+                foreach (IMagicalAttackItem item in this.magicalItems)
                 {
-                    if (item is IMagicalAttackItem)
-                    {
-                        value += (item as IMagicalAttackItem).AttackValue;
-                    }
+                    value += (item as IMagicalAttackItem).AttackValue;
                 }
                 return value;
             }
@@ -42,19 +36,16 @@ namespace RoleplayGame
             get
             {
                 int value = 0;
-                foreach (IItem item in this.items)
+                foreach (IDefenseItem item in this.items)
                 {
-                    if (item is IDefenseItem)
-                    {
-                        value += (item as IDefenseItem).DefenseValue;
-                    }
+
+                    value += (item as IDefenseItem).DefenseValue;
                 }
-                foreach (IMagicalItem item in this.magicalItems)
+                foreach (IMagicalDefenseItem item in this.magicalItems)
                 {
-                    if (item is IMagicalDefenseItem)
-                    {
-                        value += (item as IMagicalDefenseItem).DefenseValue;
-                    }
+
+                    value += (item as IMagicalDefenseItem).DefenseValue;
+
                 }
                 return value;
             }
