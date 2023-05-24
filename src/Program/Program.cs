@@ -6,24 +6,22 @@ namespace Program
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            // Creando items
             SpellsBook book = new SpellsBook();
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
-
-            AttackItem axe= new AttackItem(25);
-            AttackItem bow=new AttackItem(15);
-            DefenseItem armor1=new DefenseItem(25);
-
-            Figths figths1=new Figths();
-
-            Enemies gandalf = new Enemies("Gandalf",40);
+            AttackItem axe = new AttackItem(25);
+            AttackItem bow = new AttackItem(15);
+            DefenseItem armor = new DefenseItem(25);
+            // Creando heroes y enemigos
+            Enemies gandalf = new Enemies("Gandalf", 40);
             gandalf.AddItem(axe);
-            
-
             Heroes gimli = new Heroes("Gimli");
             gimli.AddItem(bow);
-            gimli.AddItem(armor1);
+            gimli.AddItem(armor);
+
+            Encounters fight = new Encounters();
 
             Console.WriteLine($"Gimli has ❤️ {gimli.Health}points of health");
             Console.WriteLine($"Gandalf attacks Gimli with {gandalf.AttackValue}");
@@ -37,9 +35,9 @@ namespace Program
 
             Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
 
-            figths1.addheroes(gimli);
-            figths1.addenemies(gandalf);
-            figths1.doencounterfigth(figths1);
+            fight.addHero(gimli);
+            fight.addEnemies(gandalf);
+            fight.doencounterfigth(fight);
 
         }
     }

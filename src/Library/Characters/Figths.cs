@@ -2,18 +2,18 @@ using System;
 
 namespace RoleplayGame;
 
-public class Figths : Encounters
+public class Encounters : Encounters
 {
-    public void doencounterfigth(Figths figths)
+    public void doencounterfigth(Encounters figths)
     {
         int countenemies = 0;
         int counterheroes = 0;
-        foreach (var enemie in figths.enemiex)
+        foreach (var enemie in figths.Enemies)
         {
             countenemies = countenemies + 1;
 
 
-            foreach (var heroe in figths.heroex)
+            foreach (var heroe in figths.heroes)
             {
                 counterheroes = counterheroes + 1;
 
@@ -24,14 +24,14 @@ public class Figths : Encounters
         {
             if (countenemies == counterheroes)
             {
-                foreach (var enemie in figths.enemiex)
+                foreach (var enemie in figths.Enemies)
                 {
-                    foreach (var heroe in figths.heroex)
+                    foreach (var heroe in figths.heroes)
                     {
                         heroe.ReceiveAttack(enemie.AttackValue);
                         if (heroe.Health <= 0)
                         {
-                            removeheroesdead(heroe);
+                            removeHero(heroe);
                             counterheroes = counterheroes - 1;
                             Console.WriteLine($"El heroe{heroe.Name} ha muerto en el encuentro");
                         }
@@ -41,9 +41,9 @@ public class Figths : Encounters
                         }
                     }
                 }
-                foreach (var heroe in figths.heroex)
+                foreach (var heroe in figths.heroes)
                 {
-                    foreach (var enemie in figths.enemiex)
+                    foreach (var enemie in figths.Enemies)
                     {
                         enemie.ReceiveAttack(heroe.AttackValue);
                         if (enemie.Health <= 0)

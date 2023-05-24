@@ -5,32 +5,33 @@ namespace RoleplayGame;
 
 public class Encounters
 {
-    public List<Heroes> heroex = new List<Heroes>();
-    public List<Enemies> enemiex = new List<Enemies>();
+    public List<Heroes> heroes = new List<Heroes>();
+    public List<Enemies> enemies = new List<Enemies>();
 
 
-    public void addheroes(Heroes heroef)
+    public void addHero(Heroes hero)
     {
-        this.heroex.Add(heroef);
+        this.heroes.Add(hero);
     }
 
-    public void addenemies(Enemies enemief)
+    public void addEnemies(Enemies enemy)
     {
-        this.enemiex.Add(enemief);
+        this.enemies.Add(enemy);
     }
 
-    public void removeheroesdead(Heroes heroef)
+    public void removeHero(Heroes hero)
     {
-        this.heroex.Remove(heroef);
+        this.heroes.Remove(hero);
     }
 
-    public void removeenemiesdead(Enemies enemief)
+    public void removeEnemy(Enemies enemy)
     {
-        this.enemiex.Remove(enemief);
+        this.enemies.Remove(enemy);
     }
 
-    public void doencounter()
+    public void doEncounter()
     {
+            
     }
 
 }
