@@ -25,9 +25,9 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    if (item is IAttackItem)
+                    if (item is AttackItem)
                     {
-                        value += (item as IAttackItem).AttackValue;
+                        value += (item as AttackItem).AttackValue;
                     }
                 }
                 return value;
@@ -41,9 +41,9 @@ namespace RoleplayGame
                 int value = 0;
                 foreach (IItem item in this.items)
                 {
-                    if (item is IDefenseItem)
+                    if (item is DefenseItem)
                     {
-                        value += (item as IDefenseItem).DefenseValue;
+                        value += (item as DefenseItem).DefenseValue;
                     }
                 }
                 return value;
