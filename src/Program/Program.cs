@@ -23,7 +23,7 @@ namespace Program
 
             Encounters fight = new Encounters();
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}points of health");
+            Console.WriteLine($"Gimli has ❤️ {gimli.Health} points of health");
             Console.WriteLine($"Gandalf attacks Gimli with {gandalf.AttackValue}");
 
             gimli.ReceiveAttack(gandalf.AttackValue);
@@ -37,7 +37,7 @@ namespace Program
 
             fight.addHero(gimli);
             fight.addEnemies(gandalf);
-            fight.doencounterfigth(fight);
+            fight.doEncounter();
 
         }
     }

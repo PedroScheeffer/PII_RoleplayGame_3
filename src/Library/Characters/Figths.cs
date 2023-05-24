@@ -1,8 +1,9 @@
+/*
 using System;
 
 namespace RoleplayGame;
 
-public class Encounters : Encounters
+public class Fights : Encounters
 {
     public void doencounterfigth(Encounters figths)
     {
@@ -11,13 +12,10 @@ public class Encounters : Encounters
         foreach (var enemie in figths.Enemies)
         {
             countenemies = countenemies + 1;
-
-
-            foreach (var heroe in figths.heroes)
-            {
-                counterheroes = counterheroes + 1;
-
-            }
+        }
+        foreach (var heroe in figths.heroes)
+        {
+            counterheroes = counterheroes + 1;
         }
 
         while (countenemies != 0 & counterheroes != 0)
@@ -76,3 +74,4 @@ public class Encounters : Encounters
 
     }
 }
+*/
