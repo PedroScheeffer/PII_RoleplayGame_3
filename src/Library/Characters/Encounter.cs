@@ -5,8 +5,8 @@ namespace RoleplayGame;
 
 public class Encounters
 {
-    public List<Heroes> heroex=new List<Heroes>();
-    public List<Enemies>enemiex=new List<Enemies>();
+    public List<Heroes> heroex = new List<Heroes>();
+    public List<Enemies> enemiex = new List<Enemies>();
 
 
     public void addheroes(Heroes heroef)
@@ -32,5 +32,5 @@ public class Encounters
     public void doencounter()
     {
     }
-    
+
 }

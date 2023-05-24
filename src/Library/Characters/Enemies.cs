@@ -4,9 +4,9 @@ namespace RoleplayGame;
 
 public class Enemies : Character
 {
-    public int victorypoints;
+    public int victoryPoints { get; }
     public Enemies(string name, int victorypoints) : base(name)
     {
-        this.victorypoints = victorypoints;
+        this.victoryPoints = victorypoints;
     }
 }
